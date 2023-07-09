@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>bluehalo-nar-bundles</groupId>
+        <artifactId>nifi-influxdb2-bundle</artifactId>
+        <version>0.1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>nifi-influxdb2-nar-assembly</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <assembly.name>nifi-influxdb2-nars-${project.version}</assembly.name>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>bluehalo-nar-bundles</groupId>
+            <artifactId>nifi-influxdb2-services-api-nar</artifactId>
+            <version>${project.version}</version>
+            <type>nar</type>
+        </dependency>
+        <dependency>
+            <groupId>bluehalo-nar-bundles</groupId>
+            <artifactId>nifi-influxdb2-services-nar</artifactId>
+            <version>${project.version}</version>
+            <type>nar</type>
+        </dependency>
+        <dependency>
+            <groupId>bluehalo-nar-bundles</groupId>
+            <artifactId>nifi-influxdb2-processors-nar</artifactId>
+            <version>${project.version}</version>
+            <type>nar</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <finalName>${assembly.name}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <archiverConfig>
+                                <defaultDirectoryMode>0775</defaultDirectoryMode>
+                                <directoryMode>0775</directoryMode>
+                                <fileMode>0664</fileMode>
+                            </archiverConfig>
+                            <descriptors>
+                                <descriptor>src/main/assembly/assembly.xml</descriptor>
+                            </descriptors>
+                            <tarLongFileMode>posix</tarLongFileMode>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
