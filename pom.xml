@@ -17,14 +17,14 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>bluehalo-nar-bundles</groupId>
-    <artifactId>nifi-influxdb2-bundle</artifactId>
+    <artifactId>influxdb2-bundle</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
-        <module>nifi-influxdb2-processors-bundle</module>
-        <module>nifi-influxdb2-services-bundle</module>
-        <module>nifi-influxdb2-nar-assembly</module>
+        <module>influxdb2-processors-bundle</module>
+        <module>influxdb2-services-bundle</module>
+        <module>influxdb2-nar-assembly</module>
     </modules>
 
     <properties>

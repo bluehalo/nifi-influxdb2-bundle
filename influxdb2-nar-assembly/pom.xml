@@ -6,33 +6,33 @@
 
     <parent>
         <groupId>bluehalo-nar-bundles</groupId>
-        <artifactId>nifi-influxdb2-bundle</artifactId>
+        <artifactId>influxdb2-bundle</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nifi-influxdb2-nar-assembly</artifactId>
+    <artifactId>influxdb2-nar-assembly</artifactId>
     <packaging>pom</packaging>
 
     <properties>
-        <assembly.name>nifi-influxdb2-nars-${project.version}</assembly.name>
+        <assembly.name>influxdb2-nars-${project.version}</assembly.name>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-services-api-nar</artifactId>
+            <artifactId>influxdb2-services-api-nar</artifactId>
             <version>${project.version}</version>
             <type>nar</type>
         </dependency>
         <dependency>
             <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-services-nar</artifactId>
+            <artifactId>influxdb2-services-nar</artifactId>
             <version>${project.version}</version>
             <type>nar</type>
         </dependency>
         <dependency>
             <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-processors-nar</artifactId>
+            <artifactId>influxdb2-processors-nar</artifactId>
             <version>${project.version}</version>
             <type>nar</type>
         </dependency>

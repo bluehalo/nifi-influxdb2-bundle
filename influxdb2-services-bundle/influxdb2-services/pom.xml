@@ -18,17 +18,17 @@
 
     <parent>
         <groupId>bluehalo-nar-bundles</groupId>
-        <artifactId>nifi-influxdb2-services-bundle</artifactId>
+        <artifactId>influxdb2-services-bundle</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nifi-influxdb2-services</artifactId>
+    <artifactId>influxdb2-services</artifactId>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-services-api</artifactId>
+            <artifactId>influxdb2-services-api</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

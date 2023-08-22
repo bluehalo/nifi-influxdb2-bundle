@@ -18,11 +18,11 @@
 
     <parent>
         <groupId>bluehalo-nar-bundles</groupId>
-        <artifactId>nifi-influxdb2-processors-bundle</artifactId>
+        <artifactId>influxdb2-services-bundle</artifactId>
         <version>0.1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>nifi-influxdb2-processors-nar</artifactId>
+    <artifactId>influxdb2-services-api-nar</artifactId>
     <packaging>nar</packaging>
     
     <properties>
@@ -33,20 +33,8 @@
     <dependencies>
         <dependency>
             <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-processors</artifactId>
+            <artifactId>influxdb2-services-api</artifactId>
             <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-reporting-tasks</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>bluehalo-nar-bundles</groupId>
-            <artifactId>nifi-influxdb2-services-api-nar</artifactId>
-            <version>${project.version}</version>
-            <type>nar</type>
         </dependency>
     </dependencies>
 </project>
